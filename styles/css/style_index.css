@@ -1,0 +1,134 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#section-grid>#carouselExample {
+    margin: 20px auto;
+    grid-area: car;
+     /* ajusta o limite mÃ¡ximo */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* corta proporcionalmente sem distorcer */
+    border-radius: 8px;
+}
+
+.list-group{
+    text-align: left;
+    width: 220px;
+    
+}
+
+#carouselExample{
+    align-items: center;
+
+}
+.navbar{
+    /* use a Bootstrap-like neutral background; !important so it overrides container-fluid color if needed */
+    background-color: #6c757d !important;
+}
+
+#section-grid{
+    display: grid;
+    grid-template-areas:
+        "car car"
+        "posts posts";
+    /* left column fixed width for sidebar, right column flexible for posts */
+    grid-template-columns: 260px 1fr;
+    gap: 16px;
+    padding: 12px;
+    align-items: start;
+}
+
+
+
+#section-grid > .posts{
+    grid-area: posts;
+}
+
+/* Simplify posts area: use block layout for list of posts */
+.posts{
+    display: inline;
+    padding: 8px;
+
+}
+
+/* Optional card style for individual posts inside .posts */
+.posts #placeholder_2{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+   
+}
+
+
+/* If you used placeholders previously, keep minimal styles */
+#placeholder_1{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ddd;
+    background-color: #f1f7fb;
+    padding: 8px;
+}
+
+#placeholder_1 .menu1{
+    margin-right: auto; /* keep first item to the left */
+}
+
+
+
+
+/* responsive: stack columns on small screens */
+@media (max-width: 768px) {
+    #section-grid{
+        grid-template-areas:
+            "car"
+            "info"
+            "posts";
+        grid-template-columns: 1fr;
+    }
+    #section-grid > .col-3{
+        width: 100%;
+    }
+}
+
+.carousel-control-prev:hover{
+    background-color: rgba(100, 100, 100, 0.851);
+}
+.carousel-control-next:hover{
+    background-color: rgba(100, 100, 100, 0.851);
+}
+#placeholder_2{
+    text-align: center;
+}
+
+#placeholder_2 .post .bar .update{
+   margin-left: auto;
+}
+
+#placeholder_2 .post .content{
+    border: 2px solid #b6b6dd;
+    width: 100%;
+    text-align: left;
+}
+
+.post{
+    display: flex;
+    margin-top: 15px;
+}
+
+.navbar-nav{
+    gap: 12px;
+}

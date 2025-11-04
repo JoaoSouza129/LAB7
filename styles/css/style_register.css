@@ -1,0 +1,29 @@
+/* Centralização do formulário */
+.form_container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+	
+}
+
+/* Centralização do título */
+.text-center {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo geral do body para melhor layout */
+body {
+    background-color: #f8f9fa;
+   
+}
+
+.navbar-expand-lg{
+      background-color: #6c757d !important;
+}
+
+.navbar-nav{
+    gap: 12px;
+}
